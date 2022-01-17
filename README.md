@@ -9,6 +9,19 @@ COMING SOON!
 Some of the examples are listed down below to help you create anything with this module!
 
 ```powershell
+#--- Import Custom Module ---#
+
+if (Test-Path (Join-Path -Path $PSScriptRoot -ChildPath "EasyForm.psm1"))
+{ 
+    Unblock-File -LiteralPath (Join-Path -Path $PSScriptRoot -ChildPath "EasyForm.psm1") `
+    -ErrorAction SilentlyContinue | Out-Null
+
+    Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath "EasyForm.psm1") -DisableNameChecking `
+    -Global -ErrorAction SilentlyContinue | Out-Null
+}
+```
+
+```powershell
 #--- Form Example ---#
 
 $Form = New-Form -Caption "EasyForm Example"
