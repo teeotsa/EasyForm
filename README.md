@@ -2,8 +2,6 @@
 
 EasyForm allows you to create PowerShell GUIs easily without any messy code!
 
-COMING SOON!
-
 # Examples
 
 Some of the examples are listed down below to help you create anything with this module!
